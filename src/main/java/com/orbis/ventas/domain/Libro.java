@@ -1,5 +1,7 @@
 package com.orbis.ventas.domain;
 
+import java.util.List;
+
 public class Libro {
 	
 	private int id_libro;
@@ -7,6 +9,7 @@ public class Libro {
 	private int ano;
 	private float precio;
 	private int id_editorial;
+	private List<Autor> autores;
 	
 	public Libro() {
 		

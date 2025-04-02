@@ -1,11 +1,14 @@
 package com.orbis.ventas.domain;
 
+import java.util.List;
+
 public class Editorial {
 
 	private int id_editorial;
 	private String nombre;
 	private String direccion;
 	private String telefono;
+	private List<Libro> libros;
 	
 	public Editorial() {
 		
