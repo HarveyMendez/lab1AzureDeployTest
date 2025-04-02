@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Libreria Orbis</title>
+</head>
+<body>
+
+<h1>Editoriales</h1>
+
+		<table >
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Direccion</th>
+				<th>Telefono</th>
+			</tr>
+			<tr th:each="editorial : ${editoriales}">
+				<td><a th:text="${editorial.id_editorial}" th:href="@{/buscarPorEditorial(id_editorial=${editorial.id_editorial})}"></a></td>
+				<td><a th:text="${editorial.nombre}" th:href="@{/buscarPorEditorial(id_editorial=${editorial.id_editorial})}"></a></td>
+				<td><span th:text="${editorial.direccion}"></span></td>
+				<td><span th:text="${editorial.telefono}"></span></td>
+			</tr>
+		</table>
+
+</body>
+</html>

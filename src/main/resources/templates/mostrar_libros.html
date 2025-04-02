@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2 th:text="'Libros de la editorial con ID: ' + ${id_editorial}"></h2>
+
+<div th:if="${libros.empty}"> No hay libros para esta editorial </div>
+
+<table th:unless="${libros.empty}">
+	<tr>
+		<th>ID</th>
+		<th>Titulo</th>
+		<th>Precio</th>
+		<th>Año</th>
+	</tr>
+    <tr th:each="libro : ${libros}">
+        <td><span th:text="${libro.id_libro}"></span></td>
+        <td><span th:text="${libro.titulo}"></span></td>
+        <td><span th:text="${libro.precio}"></span></td>
+        <td><span th:text="${libro.ano}"></span></td>
+    </tr>
+</table>
+
+</body>
+</html>
