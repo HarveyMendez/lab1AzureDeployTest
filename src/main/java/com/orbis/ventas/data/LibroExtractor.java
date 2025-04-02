@@ -10,6 +10,7 @@ import java.util.Map;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
+import com.orbis.ventas.domain.Editorial;
 import com.orbis.ventas.domain.Libro;
 
 public class LibroExtractor implements ResultSetExtractor<List<Libro>>{
@@ -22,7 +23,8 @@ public class LibroExtractor implements ResultSetExtractor<List<Libro>>{
 			libro = map.get(id);
 			if (libro == null) {
 				libro = new Libro();
-				libro.setId_editorial(id);
+				libro.setEditorial(new Editorial());
+				libro.getEditorial().setId_editorial(rs.getInt("id_editorial"));
 				libro.setId_libro(rs.getInt("id_libro"));
 				libro.setTitulo(rs.getString("titulo"));
 				libro.setAno(rs.getInt("ano"));

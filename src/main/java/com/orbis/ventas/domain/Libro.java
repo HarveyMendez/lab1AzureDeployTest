@@ -8,20 +8,20 @@ public class Libro {
 	private String titulo;
 	private int ano;
 	private float precio;
-	private int id_editorial;
+	private Editorial editorial;
 	private List<Autor> autores;
 	
 	public Libro() {
 		
 	}
 	
-	public Libro(int id_libro, String titulo, int ano, float precio, int id_editorial) {
+	public Libro(int id_libro, String titulo, int ano, float precio, Editorial editorial) {
 		super();
 		this.id_libro = id_libro;
 		this.titulo = titulo;
 		this.ano = ano;
 		this.precio = precio;
-		this.id_editorial = id_editorial;
+		this.editorial = editorial;
 	}
 
 	public int getId_libro() {
@@ -56,13 +56,23 @@ public class Libro {
 		this.precio = precio;
 	}
 
-	public int getId_editorial() {
-		return id_editorial;
+	public Editorial getEditorial() {
+		return editorial;
 	}
 
-	public void setId_editorial(int id_editorial) {
-		this.id_editorial = id_editorial;
+	public void setEditorial(Editorial editorial) {
+		this.editorial = editorial;
 	}
+
+	public List<Autor> getAutores() {
+		return autores;
+	}
+
+	public void setAutores(List<Autor> autores) {
+		this.autores = autores;
+	}
+
+	
 	
 	
 

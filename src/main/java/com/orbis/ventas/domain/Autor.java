@@ -1,10 +1,13 @@
 package com.orbis.ventas.domain;
 
+import java.util.List;
+
 public class Autor {
 
 	private int id_autor;
 	private String nombre_autor;
 	private String apellidos_autor;
+	private List<Libro> libros;
 	
 	public Autor(int id_autor, String nombre_autor, String apellidos_autor) {
 		super();
