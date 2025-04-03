@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h2 th:text="'Libros de la editorial con ID: ' + ${id_editorial}"></h2>
+<div class="no-data-message" th:if="${libros.empty}">No hay libros para esta editorial</div>
 
 <div th:if="${libros.empty}"> No hay libros para esta editorial </div>
 
