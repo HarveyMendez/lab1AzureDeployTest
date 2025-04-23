@@ -1,18 +1,21 @@
-package com.orbis.ventas.domain;
+package com.orbis.ventas.dto;
 
 import java.util.List;
 
-public class Autor {
+import com.orbis.ventas.domain.Libro;
 
+public class AutorDTO {
+	
 	private int id_autor;
 	private String nombre_autor;
 	private String apellidos_autor;
-	private List<Libro> libros;
 	
-	public Autor() {
+	
+	public AutorDTO() {
 		
 	}
-	public Autor(int id_autor, String nombre_autor, String apellidos_autor) {
+
+	public AutorDTO(int id_autor, String nombre_autor, String apellidos_autor) {
 		super();
 		this.id_autor = id_autor;
 		this.nombre_autor = nombre_autor;
@@ -42,6 +45,5 @@ public class Autor {
 	public void setApellidos_autor(String apellidos_autor) {
 		this.apellidos_autor = apellidos_autor;
 	}
-	
-	
+
 }
