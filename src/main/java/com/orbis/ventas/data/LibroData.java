@@ -17,8 +17,6 @@ import com.orbis.ventas.domain.Autor;
 import com.orbis.ventas.domain.Editorial;
 import com.orbis.ventas.domain.Libro;
 
-import cr.ac.ucr.paraiso.videorent.domain.Actor;
-
 @Repository
 public class LibroData {
 

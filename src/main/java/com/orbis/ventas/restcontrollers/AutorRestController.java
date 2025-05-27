@@ -13,9 +13,6 @@ import com.orbis.ventas.business.AutorBusiness;
 import com.orbis.ventas.domain.Autor;
 import com.orbis.ventas.dto.AutorDTO;
 
-import cr.ac.ucr.paraiso.videorent.domain.Actor;
-import cr.ac.ucr.paraiso.videorent.dto.ActorDTO;
-
 @RestController
 @RequestMapping(value = "/autores")
 public class AutorRestController {
